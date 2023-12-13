@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="../CSS/producto_nuevo.css">
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>Ecommerce</span>
+            </div>
+            <div class="user">
+                <img src="../img/photo_profile.webp" alt="Usuario" class="user-image" onclick="toggleMenu()">
+                <div class="user-menu" id="userMenu">
+                    <p><strong>Nombre de Usuario</strong></p>
+                    <span id="admin-label">Admin</span>
+                    <a href="../pages/dashboard.html" target="_blank">Administrador</a>
+                    <a href="../pages/login.html">Salir</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="app">
+        <form>
+            <h2>Agregar Producto</h2>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required v-model="nombre">
+            </div>
+            <div>
+                <label for="descripcion">Descripción:</label>
+                <input id="descripcion" name="descripcion" required v-model="descripcion"></input>
+            </div>
+            <div>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required v-model="precio">
+            </div>
+            <div>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required v-model="stock">
+            </div>
+            <div>
+                <label for="imagen">Imagen:</label>
+                <input type="text" id="imagen" name="imagen" required v-model="imagen">
+            </div>
+            <div>
+                <img width="200" :src="imagen" :alt="nombre">
+            </div>
+            <div>
+                <button type="button" v-on:click="grabar()">Guardar</button>
+            </div>
+        </form>
+    </main>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="../Js/dashboard.js"></script>
+<script src="../Js/app.js"></script>
+</body>
+</html>

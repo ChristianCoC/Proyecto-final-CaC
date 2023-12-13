@@ -1,0 +1,136 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #f4f4f4;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.user {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user-menu {
+  font-size: 1.2rem;
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  color: #333;
+  background-color: #f4f4f4;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 15px;
+}
+
+.user-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.user-menu a:hover {
+  color: #3498db;
+}
+
+.user-menu strong {
+  color: #333;
+}
+.user-menu p {
+  margin: 0px;
+  margin-top: 10px;
+}
+#admin-label {
+  color: #3498db;
+}
+
+/* Producto nuevo */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #3498db;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: #f4f4f4;
+    gap: 10px;
+}
+
+form h2 {
+    color: #3498db;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    color: #333;
+}
+
+input {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: solid 1px #3498db;
+    border-radius: 5px;
+    color: #333;
+    width: 300px;
+}
+
+form button {
+    background-color: #3498db;
+    font-weight: bold;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+form button:hover {
+    background-color: #087fcd;
+}

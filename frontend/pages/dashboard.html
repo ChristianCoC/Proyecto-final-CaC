@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span>Ecommerce</span>
+      </div>
+      <div class="user">
+        <img src="../img/photo_profile.webp" alt="Usuario" class="user-image" onclick="toggleMenu()">
+        <div class="user-menu" id="userMenu">
+          <p><strong>Nombre de Usuario</strong></p>
+          <span id="admin-label">Admin</span>
+          <a href="../pages/home.html" target="_blank">Inicio</a>
+          <a href="../pages/login.html">Salir</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="app" class="container">
+      <h1>Panel de Administración</h1>
+      <br>
+      <a class="btn btn-primary" href="producto_nuevo.html" target="_blank">Agregar producto</a>
+      <br><br>
+      <div v-if="error">
+        <p>Lo sentimos , ha ocurrido un error</p>
+      </div>
+      <div v-else>
+        <section v-if="cargando">
+          <div class="spinner-border"></div>
+          <p>Cargando...</p>
+        </section>
+        <section v-else>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="" v-for="producto in productos">
+                  <td scope="row">{{producto.id}}</td>
+                  <td>{{producto.nombre}}</td>
+                  <td>{{producto.descripcion}}</td>
+                  <td>{{producto.precio}}</td>
+                  <td>{{producto.stock}}</td>
+                  <td>
+                    <img width="60" :src="producto.imagen" :alt="producto.nombre">
+                  </td>
+                  <td>
+                    <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" target="_blank">Editar</a>
+                    <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../Js/dashboard.js"></script>
+  <script src="../Js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <title>Ecommerce</title>
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>Ecommerce</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Buscar productos...">
+            </div>
+            <div class="user">
+                <img src="../img/photo_profile.webp" alt="Usuario" class="user-image" onclick="expandirMenu()">
+                <div class="user-menu" id="userMenu">
+                    <p><strong>Nombre de Usuario</strong></p>
+                    <a href="../pages/dashboard.html" target="_blank">Administrador</a>
+                    <a class="open-cart-btn" onclick="openCartModal()">Carrito de Compras</a>
+                    <a href="../pages/login.html" target="_blank">Iniciar Sesión</a>
+                    <a href="../pages/register.html" target="_blank">Subscribirse</a>
+                    <a href="../pages/login.html">Salir</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-btn" onclick="closeCartModal()">&times;</span>
+            <div>
+                <h2>Carrito de Compras</h2>
+                <ul id="cartItems">
+                    <!-- Aquí se mostrarán los elementos del carrito -->
+                </ul>
+                <p>Total: $<span id="cartTotal">0.00</span></p>
+                <button class="checkout-btn"><a href="../pages/pay.html" target="_blank">Pagar</a></button>
+                <button onclick="clearCart()" class="clear-cart-btn">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <h2 id="subtitle">Nuestros Productos</h2>
+        <div id="addedMessage" class="added-message">Producto Agregado</div>
+        <div class="product-grid">
+            <div class="product">
+                <img src="../img/product-image.jpg" alt="Producto">
+                <h3>Remera Negra</h3>
+                <p>Talle L</p>
+                <p>Precio: $10000</p>
+                <button onclick="addToCart('Remera Negra', 10000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/remera-blanca.jpg" alt="Producto">
+                <h3>Remera Blanca</h3>
+                <p>Talle M</p>
+                <p>Precio: $15000</p>
+                <button onclick="addToCart('Remera Blanca', 15000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/remera-azul.jpg" alt="Producto">
+                <h3>Remera Azul</h3>
+                <p>Talle S</p>
+                <p>Precio: $20000</p>
+                <button onclick="addToCart('Remera Azul', 20000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/chomba.jpg" alt="Producto">
+                <h3>Chomba Negra</h3>
+                <p>Talle XL</p>
+                <p>Precio: $10000</p>
+                <button onclick="addToCart('Chomba Negra', 10000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/remera-verde.jpg" alt="Producto">
+                <h3>Remera Verde</h3>
+                <p>Talle L</p>
+                <p>Precio: $15000</p>
+                <button onclick="addToCart('Remera Verde', 15000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/verde-militar.jpg" alt="Producto">
+                <h3>Remera Verde Militar</h3>
+                <p>Talle M</p>
+                <p>Precio: $20000</p>
+                <button onclick="addToCart('Remera Verde Militar', 20000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/pantalon-azul-2.jpg" alt="Producto">
+                <h3>Pantalón Azul</h3>
+                <p>Talle XL</p>
+                <p>Precio: $10000</p>
+                <button onclick="addToCart('Chomba Negra', 10000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/pantalon-azul.jpg" alt="Producto">
+                <h3>Pantalón de vestir</h3>
+                <p>Talle L</p>
+                <p>Precio: $15000</p>
+                <button onclick="addToCart('Remera Verde', 15000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/pantalon-bosillo.jpg" alt="Producto">
+                <h3>Pantalón Cargo</h3>
+                <p>Talle M</p>
+                <p>Precio: $20000</p>
+                <button onclick="addToCart('Remera Verde Militar', 20000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/pantalon-dama.jpg" alt="Producto">
+                <h3>Pantalón Dama</h3>
+                <p>Talle XL</p>
+                <p>Precio: $10000</p>
+                <button onclick="addToCart('Chomba Negra', 10000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/bermuda-deportiva.jpg" alt="Producto">
+                <h3>Bermuda Deportiva</h3>
+                <p>Talle L</p>
+                <p>Precio: $15000</p>
+                <button onclick="addToCart('Remera Verde', 15000)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="../img/bermuda.jpg" alt="Producto">
+                <h3>Bermuda Azul</h3>
+                <p>Talle M</p>
+                <p>Precio: $20000</p>
+                <button onclick="addToCart('Remera Verde Militar', 20000)">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <!-- Aquí irá la paginación -->
+            <button id="prevPage" onclick="changePage(-1)">Anterior</button>
+            <button id="nextPage" onclick="changePage(1)">Siguiente</button>
+            <!-- Agregar más botones según sea necesario -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ecommerce - Tienda de Ropa en Línea. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../Js/home.js"></script>
+</body>
+
+</html>

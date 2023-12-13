@@ -1,0 +1,240 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+}
+#subtitle {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+header {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.search input {
+    padding: 8px;
+    width: 200px;
+}
+
+.user {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.user-menu {
+    font-size: 1.3rem;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    color: #333;
+    background-color: #f4f4f4;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+.user-menu strong {
+    color: #333;
+}
+.user-menu p {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.user-menu a:hover {
+    color: #3498db;
+}
+
+main {
+    padding: 20px;
+}
+
+button {
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 450px;
+    gap: 60px;
+    margin: auto;
+    width: 1020px;
+}
+
+.product {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product img {
+    border-radius: 5px;
+    width: 280px;
+    height: 250px;
+    margin: auto;
+}
+
+.product button {
+    margin-right: 5px;
+    background-color: #3498db;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #087fcd;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin-right: 5px;
+    
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.pagination > #pagination-active {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos del modal de carrito de compras */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-content h2 {
+    color: #3498db;
+}
+
+.cart-content div {
+    margin: 5px;
+    border: #3498db solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cart-content p, #cartItems {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.checkout-btn, .clear-cart-btn {
+    background-color: #3498db;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover, .clear-cart-btn:hover {
+    background-color: #087fcd;
+}
+
+.checkout-btn a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+#cartItems {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.added-message {
+    width: fit-content;
+    display: none;
+    border: #3498db solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #3498db;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+

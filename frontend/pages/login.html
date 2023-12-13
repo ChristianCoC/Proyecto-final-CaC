@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <title>Iniciar sesión - Ecommerce</title>
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <form class="login-form">
+            <h2>Iniciar sesión</h2>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label id="session_container">
+                <input type="checkbox" id="remember" name="remember">
+                <p>Mantener la sesión</p>
+            </label>
+
+            <button type="submit">Iniciar sesión</button>
+
+            <p class="register-link">¿Nuevo por aquí? <a href="./register.html">Regístrate</a></p>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</body>
+</html>
