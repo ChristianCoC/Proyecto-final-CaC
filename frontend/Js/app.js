@@ -5,7 +5,7 @@ createApp({
     data() {
         return {
             productos: [],
-            url: 'http://127.0.0.1:5000/productos',
+            url: 'https://christiancoc.pythonanywhere.com/productos',
             error: false,
             cargando: true,
             id: 0,
